@@ -1,0 +1,97 @@
+@mixin headerStyles($size: 1.7rem){
+  font-family: $secondary-font;
+  color:$dark-blue;
+  font-size: $size;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+@mixin gradientStyle($degree){
+  background: linear-gradient($degree, rgba(246,237,237,1) 40%, rgba(220,244,234,1) 100%);
+}
+
+@mixin gradientBoxStyle($degree: -90deg){
+  @include gradientStyle($degree);
+  border-radius: $round-corners;
+}
+
+@mixin pillStyle(){
+  border-radius: 99rem;
+}
+
+@mixin elipseStyle($background){
+background-color: $background;
+border-radius: 100%;
+}
+
+@mixin invertColors(){
+  background-color: $off-white;
+  color: $dark-blue;
+}
+
+@mixin bigButtonStyle(){
+  @include pillStyle();
+ @include headerStyles(1.5rem);
+line-height: 0;
+  color: $off-white;
+  border: none;
+  background-color: $dark-blue;
+  padding: 2rem 4rem;
+  border: .2rem solid $dark-blue;
+transition: all  .3s ease;
+
+  &:hover{
+    cursor: pointer;
+    @include invertColors();
+    transition: all  .3s ease;
+  }
+
+  @include respond-to(md) {
+    @include headerStyles(2.2rem);
+
+    padding: 1.6rem 4rem;
+    color: $off-white;
+    border: .2rem solid $dark-blue;
+  }
+}
+
+@mixin scaleUpTopRightAnimation($delay: 0s){
+  animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) $delay both;
+}
+
+@mixin slideUpAnimation($delay: 0s){
+  animation: slide-up 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) $delay both;
+}
+
+@mixin slideToLeftAnimation($delay: 0s){
+  animation: slide-to-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) $delay both;
+}
+
+@mixin fadeInAnimation($delay: 0s){
+  animation: fade-in 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) $delay both;
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == xs {
+      @media (max-width: $breakpoint-xs) {
+        @content;
+      }
+    } @else if $breakpoint == sm {
+      @media (min-width: $breakpoint-sm) {
+        @content;
+      }
+    } @else if $breakpoint == md {
+      @media (min-width: $breakpoint-md) {
+        @content;
+      }
+    } @else if $breakpoint == lg {
+      @media (min-width: $breakpoint-lg) {
+        @content;
+      }
+    } @else if $breakpoint == xl {
+      @media (min-width: $breakpoint-xl) {
+        @content;
+      }
+    }
+  }
+  

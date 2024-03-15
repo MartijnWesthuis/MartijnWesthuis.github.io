@@ -1,0 +1,47 @@
+@keyframes scale-up-tr {
+    0% {
+      transform: scale(0);
+      transform-origin: 100% 0%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 100% 0%;
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(4rem);
+
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-to-left {
+    0% {
+      opacity: 0;
+      transform: translatex(6rem);
+
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulsate-bck {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

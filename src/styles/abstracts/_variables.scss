@@ -1,0 +1,19 @@
+$dark-blue: rgba(50, 64, 87, 1);
+$off-white: rgb(255, 255, 253, 1);
+
+//fonts
+$primary-font: "Quicksand", sans-serif;
+$secondary-font: "Raleway", sans-serif;
+
+$round-corners: 2rem;
+
+//breakpoints
+$breakpoint-xs: 320px;
+$breakpoint-sm: 576px; 
+$breakpoint-md: 768px; 
+$breakpoint-lg: 992px; 
+$breakpoint-xl: 1200px; 
+
+:root {
+    --breakpoint-sm: #{$breakpoint-sm};
+  }

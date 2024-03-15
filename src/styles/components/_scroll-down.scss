@@ -1,0 +1,18 @@
+.scroll-down{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+    flex: 1;
+    padding-bottom: 1rem;
+
+
+    &__button{
+        line-height: 0;
+        padding: 0.8rem;
+        width: 3.2rem;
+        border: none;
+        background-color: $off-white;
+        border-top: 1px solid $dark-blue;
+    }
+}

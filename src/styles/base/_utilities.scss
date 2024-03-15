@@ -1,0 +1,75 @@
+.p-2 {
+  padding: 2rem;
+}
+
+.p-page {
+  padding: 0 2rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.opacity-0 {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.hide-next, .hide-prev{
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.hide-next {
+  transform: translateX(1rem);
+}
+.hide-prev {
+    transform: translateX(-1rem);
+  }
+
+/* Transition Styles for sliding to the next */
+.slide-next-enter-active,
+.slide-next-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+.slide-next-enter-from {
+  transform: translateX(120%);
+}
+
+.slide-next-leave-to {
+  transform: translateX(-120%);
+}
+
+.slide-next-enter-to {
+  transform: translateX(0);
+}
+
+/* Transition Styles for sliding to the previous */
+.slide-prev-enter-active,
+.slide-prev-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+.slide-prev-enter-from {
+  transform: translateX(-120%);
+}
+
+.slide-prev-leave-to {
+  transform: translateX(120%);
+}
+
+.slide-prev-enter-to,
+.slide-prev-leave-from {
+  transform: translateX(0);
+}

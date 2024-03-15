@@ -1,0 +1,40 @@
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+&__title{
+    text-align: center;
+}
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+
+    @include respond-to(md){
+        gap: 5rem;
+    }
+
+    &__item {
+      @include gradientBoxStyle();
+      display: flex;
+      flex: 1 0 15rem;
+      height: 15rem;
+      align-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      
+
+      @include respond-to(md){
+        flex: 0 0 20rem;
+        height: 18rem;
+      }
+    }
+
+    h3{
+        width: 100%;
+    }
+  }
+}

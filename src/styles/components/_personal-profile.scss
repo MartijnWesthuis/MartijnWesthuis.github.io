@@ -1,0 +1,23 @@
+.personal-profile{
+    margin-top: 3rem;
+    @include slideUpAnimation(1.4s);
+    @include respond-to(md){
+        margin-top: -18rem;
+        max-width: 50rem;
+    }
+
+
+    @include respond-to(lg){
+        max-width: 70rem;
+    }
+
+    &__intro{
+        @include respond-to(md){
+        font-size: 1.8rem
+        }
+
+        @include respond-to(lg){
+            font-size: 2rem
+            }
+    }
+}

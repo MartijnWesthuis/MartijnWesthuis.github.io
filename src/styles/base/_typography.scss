@@ -1,0 +1,39 @@
+h1 {
+  @include headerStyles(2.2rem);
+
+  @include respond-to(sm) {
+    @include headerStyles(4rem);
+  }
+
+  @include respond-to(md) {
+    @include headerStyles(6rem);
+  }
+
+  @include respond-to(lg) {
+    @include headerStyles(7rem);
+  }
+}
+
+h2 {
+  @include headerStyles(2.2rem);
+
+  @include respond-to(md) {
+    @include headerStyles(3.8rem);
+  }
+}
+
+h3 {
+  @include headerStyles;
+  @include respond-to(md) {
+    @include headerStyles(2rem);
+    line-height: 1.4;
+  }
+}
+
+h4 {
+  @include headerStyles(1.5rem);
+
+  @include respond-to(md) {
+    @include headerStyles(2rem);
+  }
+}

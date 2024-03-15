@@ -1,0 +1,80 @@
+// Here i place some basic styles that are used throughout the app. it contains mostly reset styles.
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    background-color: $off-white;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.3rem;
+    font-family: $primary-font;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: $dark-blue;
+
+    @include respond-to(sm) {
+      font-size: 1.6rem;
+    }
+
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+main{
+  overflow: hidden;
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  padding-bottom: 8rem;
+
+  @include respond-to(md){
+    gap: 14rem;
+  }
+}
+
+
+
+.container{
+  max-width: 117rem;
+  margin: 0 auto;
+}
+
+div{
+  flex-wrap: wrap;
+}
+
+.introduction-container{
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+
+
+}

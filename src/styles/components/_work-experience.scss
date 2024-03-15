@@ -1,0 +1,57 @@
+.work-experience {
+  @include slideUpAnimation(2s);
+  display: flex;
+  padding: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  @include respond-to(md) {
+    gap: 6rem;
+  }
+
+  &__peroid-container {
+    @include gradientBoxStyle();
+    @include pillStyle();
+    position: relative;
+    font-family: $secondary-font;
+    border: 1px solid $dark-blue;
+    padding: 1rem 1rem;
+    display: flex;
+    gap: 1rem;
+
+    &__active{
+        @include pillStyle();
+        position: absolute;
+        width: 10rem;
+        height: 3.8rem;
+        background-color: $dark-blue;
+        top: .1rem;
+        left: 0;
+        transition: transform .3s ease;
+
+        @include respond-to(sm) {
+            width: 14rem;
+            height: 4.2rem;
+          }
+
+    }
+
+    &__year {
+        position: relative;
+      cursor: pointer;
+      width: 8rem;
+      text-align: center;
+      transition: all .3s ease;
+
+      @include respond-to(sm) {
+        width: 12rem;
+      }
+
+      &--active{
+        color: $off-white;
+        transition: all .3s ease;
+      }
+    }
+  }
+}

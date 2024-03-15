@@ -1,0 +1,12 @@
+.call-to-action{
+    display: flex;
+    padding: 3rem 2rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    @include slideUpAnimation(1.8s);
+
+    @include respond-to(sm){
+        justify-content: left;
+    }
+}

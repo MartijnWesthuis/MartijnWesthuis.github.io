@@ -1,0 +1,4 @@
+.big-button{
+    @include bigButtonStyle;
+    animation: pulsate-bck 2s ease-in-out infinite both;
+}

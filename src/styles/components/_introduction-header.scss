@@ -1,0 +1,128 @@
+.introduction {
+  flex-direction: column;
+  margin-top: 3rem;
+
+  @include respond-to(md) {
+    margin-top: 0rem;
+  }
+
+  @include respond-to(lg) {
+    margin-top: 8rem;
+  }
+
+  &__hello {
+    position: relative;
+    z-index: 1;
+    padding: 1rem 3rem;
+    @include slideUpAnimation(.6s);
+
+    p {
+      font-size: 2rem;
+
+      @include respond-to(md) {
+        font-size: 5rem;
+      }
+
+    }
+  }
+
+  &__name-and-photo {
+    @include gradientBoxStyle(-135deg);
+    @include fadeInAnimation(.2s);
+    position: relative;
+
+    @include respond-to(md) {
+      max-width: calc(100% - 5rem);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 2rem;
+      left: 1rem;
+      z-index: -1;
+      @include gradientBoxStyle(-135deg);
+      opacity: 0.5;
+
+      @include respond-to(md) {
+        top: 5rem;
+        left: 5rem;
+      }
+    }
+
+    &__name {
+      flex: 1;
+      padding: 2rem 3rem;
+      @include slideUpAnimation(.8s);
+    }
+
+    &__photo {
+      flex: 1;
+      position: relative;
+
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        height: 17rem;
+        border-radius: 0 0 2rem 0;
+        @include slideToLeftAnimation(.4s);
+
+        @include respond-to(md) {
+          height: 28rem;
+        }
+
+        @include respond-to(lg) {
+          height: 39rem;
+        }
+      
+        
+      }
+    }
+  }
+
+  &__job-titles {
+    position: relative;
+    gap: 0.5rem;
+    margin: -2rem 2rem 0 0;
+    justify-content: end;
+
+    &__job-title {
+      position: relative;
+      flex: 0 0 11rem;
+      height: 11rem;
+      padding: 0.2rem;
+      border: 0.4rem solid $off-white;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+
+      @include respond-to(md) {
+        flex: 0 0 16rem;
+        height: 16rem;
+      }
+
+      &--1 {
+        @include gradientBoxStyle(330deg);
+        @include scaleUpTopRightAnimation(1.2s);
+
+        @include respond-to(md) {
+          padding: 0.4rem;
+      margin: 12rem -8rem 0 0;
+      z-index: 1;
+        }
+
+      
+      }
+
+      &--2 {
+        @include gradientBoxStyle(390deg);
+        @include scaleUpTopRightAnimation(1s);
+      }
+    }
+  }
+}

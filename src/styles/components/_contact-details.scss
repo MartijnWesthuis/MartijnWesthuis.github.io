@@ -1,0 +1,12 @@
+.contact-details{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+
+&__detail{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+}
